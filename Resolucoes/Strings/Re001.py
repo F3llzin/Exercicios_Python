@@ -1,3 +1,14 @@
-'''Crie um programa que leia um nome completo
-e mostre: o nome com todas as letras maiúsculas e minúsculas,
-quantas letras tem ao todo e quantas letras tem o primeiro nome'''
+nome = input("Digite seu nome: ")
+nome_alterado = nome
+
+nome = nome.lower()
+print(nome)
+
+nome = nome.upper()
+print(nome)
+
+nome_alterado = nome_alterado.replace(" ", "")
+print(len(nome))
+
+nome = nome.split()
+print(len(nome[0]))

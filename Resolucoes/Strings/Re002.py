@@ -1,3 +1,15 @@
-'''Crie um programa que leia um número inteiro de
-0 a 9999 e mostre na tela quantas casa de milhares,
-centenas, dezenas e unidades'''
+numero = int(input("Digite um número: "))
+resto = 0
+
+milhar = numero // 1000
+resto = numero % 1000
+
+centena = resto // 100
+resto %= 100
+
+dezena = resto // 10
+resto %= 10
+
+unidade = resto // 1
+
+print(f"O número tem: {milhar} milhare(s), {centena} centena(s), {dezena} dezena(s) e {unidade} unidade(s)")
