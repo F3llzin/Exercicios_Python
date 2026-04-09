@@ -1,6 +1,6 @@
 from random import randint
 
-numero = int(input("Digite um número e tente adivinhar o que estou pensando: "))
+numero = int(input("Tente adivinhar o número que estou pensando entre 0 e 5: "))
 
 sorteio = randint(0, 5)
 

@@ -12,4 +12,4 @@ resto %= 10
 
 unidade = resto // 1
 
-print(f"O número tem: {milhar} milhare(s), {centena} centena(s), {dezena} dezena(s) e {unidade} unidade(s)")
+print(f"O número tem: {milhar} milhar(es), {centena} centena(s), {dezena} dezena(s) e {unidade} unidade(s)")

@@ -1,10 +1,3 @@
-frase = input("Digite uma frase: ").lower()
+nome = input("Digite seu nome: ").split()
 
-indice_a = frase.count("a")
-posicao_primeira_a = frase.find("a")
-posicao_ultima_a = frase.rfind("a")
-
-print(f'''A quantidade de letra "a": {indice_a}
-A posição que aparece a primeira letra "a": {posicao_primeira_a}
-A posição que aparece a última letra "a": {posicao_ultima_a}
-''')
+print(f"Primeiro nome: {nome[0]} e o último nome: {nome[-1]}")

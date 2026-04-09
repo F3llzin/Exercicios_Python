@@ -1,14 +1,14 @@
 nome = input("Digite seu nome: ")
-nome_alterado = nome
+nome_alterado = nome.strip()
 
 nome = nome.lower()
-print(nome)
+print("Seu nome em minúsculas é: ", nome)
 
 nome = nome.upper()
-print(nome)
+print("Seu nome em maiúsculas é: ", nome)
 
 nome_alterado = nome_alterado.replace(" ", "")
-print(len(nome))
+print("A quantidade de letras do seu nome é: ", len(nome_alterado))
 
 nome = nome.split()
-print(len(nome[0]))
+print("A quantidade de letras do seu primeiro nome é: ", len(nome[0]))

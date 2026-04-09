@@ -1,4 +1,4 @@
-numero1, numero2, numero3, numero4 = input().split()
+numero1, numero2, numero3, numero4 = input("Digite as quatro notas de um aluno: ").split()
 
 numero1 = float(numero1)
 numero2 = float(numero2)
