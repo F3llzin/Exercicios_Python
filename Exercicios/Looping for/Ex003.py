@@ -1,0 +1,1 @@
+'''Crie um programa que calcule a soma de todos os números ímpares que são múltiplos de três no intervalo de 1 até 500 e mostre na tela o resultado.'''
