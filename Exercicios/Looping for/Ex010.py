@@ -1,1 +1,2 @@
-'''Crie um programa que leia o peso de cinco pessoas e mostre na tela qual foi o maior e o menor peso lido.'''
+'''Crie um programa que leia o peso de cinco pessoas 
+e mostre na tela qual foi o maior e o menor peso lido.'''
