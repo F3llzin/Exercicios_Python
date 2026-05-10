@@ -1,29 +1,28 @@
-'''Crie um programa que leia vários números inteiros, calcule a média, o maior e o menor 
-valor e mostre na tela os resultados e quantos números foram digitados, 
-perguntando ao usuário se deseja continuar a cada novo número.'''
-contador = 1
-soma = 0
-media = 0
-maior = 0
-menor = 0
-valores = int(input("Digite um número "))
-resposta = input("Deseja continuar [S/N]? ").upper()
+resposta = "S"
+condicao = soma = media = maior = menor = numeros_digitados = 0
 
-while resposta != "N":
-    menor = valores
-    maior = valores
-    soma += valores
-    media = soma / contador
-    contador += 1
-    valores = int(input("Digite um número "))
-    soma += valores
-    if valores > maior:
-        maior = valores
-    if valores < menor:
-        menor = valores
-    resposta = input("Deseja continuar [S/N]? ").upper()
- 
-print(f"Você digitou {contador} números, {media:.2f} é a média entre esses números, o maior é {maior} e o menor é {menor}")
+while resposta == "S":
+    numeros = int(input("Digite um número: "))
 
+    numeros_digitados += 1
+    condicao += 1
 
-#corrigir esse exercício
+    soma += numeros
+    media = soma / numeros_digitados
+
+    if condicao == 1:
+        maior = numeros
+        menor = numeros
+    else: 
+        if numeros > maior:
+            maior = numeros
+        if numeros < menor:
+            menor = numeros
+
+    resposta = input("Digite uma resposta[S/N]: ").upper().strip()[:1]
+
+    while resposta not in "NS":
+        print("Valor inválido, digite outro!")
+        resposta = input("Digite uma resposta válida[S/N]: ").upper().strip()[:1]
+
+print(f"O maior número é: {maior}, o menor número é: {menor}, a média é: {media} e a quantidade é: {numeros_digitados}")

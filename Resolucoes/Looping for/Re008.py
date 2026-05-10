@@ -1,17 +1,10 @@
-'''Crie um programa que leia uma frase, desconsidere espaços e acentos 
-e mostre na tela se ela é ou não um palíndromo.'''
-frase = input("Digite uma frase: ").lower()
+frase = input("Digite uma frase: ").lower().strip().replace(" ","")
+palindromo = frase[::-1]
 
-for i in frase[::-1]:
-    if i == frase: 
-        print("É um palíndromo.")
-    else:
-        print("Não é um palíndromo.")
+print(palindromo)
 
+if frase == palindromo:
+    print(f"A frase: {frase} é um palíndromo")
+else:
+    print(f"A frase: {frase} não é um palindromo")
 
-
-
-
-
-
-# não consegui fazer, revisitar exercício

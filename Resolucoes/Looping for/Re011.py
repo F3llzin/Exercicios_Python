@@ -1,37 +1,23 @@
-'''Crie um programa que leia o nome, idade e sexo de quatro pessoas, 
-calcule a média de idade do grupo e mostre na tela a média, 
-o nome do homem mais velho e quantas mulheres têm menos de vinte anos.'''
-mulheres_menores = 0
-contador = 0
+mulheres_menores = soma = homem_idade_maior = 0
 homem_maior = ""
-soma = 0
 
 for i in range(0, 4):
-    nome, idade, sexo = input("Digite o sexo: ").split()
-
-    nome = nome.lower()
-    sexo = sexo.lower()
-    idade = int(idade)
+    nome = input("Digite o nome: ").strip()
+    idade = int(input("Digite a sua idade: "))
+    sexo = input("Digite o seu sexo: ").upper().strip()[:1]
 
     soma += idade
-    media = soma / 4
 
-    if sexo == "feminino" and idade < 20:
+    if sexo in "F" and idade < 20:
         mulheres_menores += 1
 
-    if sexo == "masculino" and contador > idade:
-        contador = idade
-        homem_maior = nome
-        print("F")
+    if sexo in "M":
+        if i == 0 or idade > homem_idade_maior:
+            homem_maior = nome
+            homem_idade_maior = idade
+
+
     
+media = soma / 4
 
-print(mulheres_menores)
-print(media, homem_maior)
-
-
-
-
-
-
-
-# não consegui fazer, revisitar exercício
+print(f"A média das idades é: {media}, o homem mais velho é: {homem_maior} e a quantidade de mulheres que tem menos de vinte é: {mulheres_menores}")
